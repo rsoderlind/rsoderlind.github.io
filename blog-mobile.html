@@ -1,0 +1,72 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inset Cross Stripes</title>
+  <link rel="stylesheet" href="styles-mobile.css" />
+</head>
+<body>
+
+  <div class="stripe horizontal top hide-on-scroll"></div>
+  
+
+  <div class="stripe horizontal top2 hide-on-scroll"></div>
+  
+<div class="wrapper">
+  <div class="logo hide-on-scroll"><a href="./mobile.html"><img src="./logo-mobile.png"/></a></div>
+
+</div>
+
+   <div class="maintext">
+<p class="paragraph">
+BLOG
+</p>
+ <p class="paragraph">
+----------------------------------------------
+8/3/2025
+----------------------------------------------
+</p>
+ <p class="paragraph">
+Over the past seven weeks, I’ve immersed myself in San Francisco State University’s intensive Medical Administrative Assistant certificate program, and today I’m thrilled to say it’s complete! The curriculum covered everything from medical terminology and insurance coding to patient scheduling and HIPAA compliance. Balancing coursework with my ongoing contract work pushed me to refine my time-management skills and deepen my technical know-how. I approached each module with one goal in mind: to open up new opportunities in the administrative field and broaden the scope of roles I can pursue.
+</p>
+ <p class="paragraph">
+While my heart remains firmly rooted in the world of administrative support—where I’ve spent the last eight years contracting and building teams’ efficiency—this specialized certification adds an important new dimension. My background in web development and office administration gives me a unique perspective on workflow optimization, but healthcare brings its own complexities and rewards. Now, armed with the MAA credential, I can confidently apply for roles in hospitals, clinics, and medical offices that require not just organizational prowess, but also an understanding of the healthcare landscape.
+</p>
+ <p class="paragraph">
+I’m excited to share that on August 14th, I’ll begin a one-month contract with UCSF. It’s an incredible opportunity to put my new skills to work in one of the country’s top health systems. I’m looking forward to coordinating patient appointments, managing medical records, and ensuring our team’s communications run smoothly. My hope is that this assignment will evolve into a full-time position, but regardless of the outcome, I’ll gain invaluable experience and make meaningful connections along the way.
+</p>
+ <p class="paragraph">
+If the UCSF contract doesn’t extend beyond September, it simply means I’ll continue my search—now with both MAA certification and eight years of proven administrative excellence on my résumé. I’m energized by the prospect of finding a role where I can combine my people-first approach with my technical aptitude, whether that’s in healthcare or another fast-paced industry. Thank you for reading, and stay tuned for updates on this exciting next chapter in my career!
+</p>
+
+ <p class="paragraph">
+----------------------------------------------
+End of 8/3/2025
+----------------------------------------------
+</p>
+</div>
+
+
+  <footer class="sticky-footer">
+       <a href="./about-me-mobile.html"><img src="./about-me-button-mobile.png" class="button"/></a> &nbsp;&nbsp;
+    <a href="./resume-mobile.html"><img src="./resume-button-mobile.png" class="button"/></a>&nbsp;&nbsp;
+    <a href="./writing-mobile.html"><img src="./writing-button-mobile.png" class="button"/></a>&nbsp;&nbsp;
+    <a href="./blog-mobile.html"><img src="./blog-button-mobile.png" class="button"/></a>&nbsp;&nbsp;
+  </footer>
+
+
+    <script>
+    const toHide = document.querySelectorAll('.hide-on-scroll');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        toHide.forEach(el => el.classList.add('hidden'));
+      } else {
+        toHide.forEach(el => el.classList.remove('hidden'));
+      }
+    });
+  </script>
+
+</body>
+</html>
