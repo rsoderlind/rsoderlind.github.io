@@ -1,0 +1,58 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inset Cross Stripes</title>
+  <link rel="stylesheet" href="styles-mobile.css" />
+</head>
+<body>
+
+  <div class="stripe horizontal top hide-on-scroll"></div>
+  
+
+  <div class="stripe horizontal top2 hide-on-scroll"></div>
+  
+<div class="wrapper">
+  <div class="logo hide-on-scroll"><img src="./logo-mobile.png"/></div>
+
+</div>
+
+ <div class="maintext">
+<p class="paragraph">
+Hello! I’m Ramona Soderlind, a tech-savvy administrative professional with a passion for helping teams and individuals thrive. Over the past eight years, I’ve honed my organizational and communication skills as a contracting administrative assistant, partnering with executives, boards, and project teams across a variety of industries. Now I’m eager to bring that experience into a full-time role, where I can grow alongside a company that values collaboration, innovation, and service excellence.
+</p>
+<p class="paragraph">
+Before transitioning into administration, I built a solid foundation in web development—learning HTML, CSS, JavaScript, and PHP as I tackled projects for startups and established organizations alike. While I love solving problems in code, I quickly realized that my real strength lies in working directly with people: streamlining processes, anticipating needs, and creating an environment where everyone can focus on their highest-value work. That blend of technical know-how and interpersonal flair allows me to bridge gaps between teams, tools, and workflows.
+</p>
+<p class="paragraph">
+As an administrative assistant, I thrive on turning chaos into clarity. Whether it’s coordinating complex calendars, drafting polished reports, or rolling out new software tools, I take pride in anticipating challenges before they arise and delivering proactive solutions. I keep myself current on the latest productivity apps—leveraging platforms like Trello, Otter.ai, and automation tools—to ensure that my team spends less time on busywork and more time moving projects forward.
+</p>
+<p class="paragraph">
+Above all, I believe that success comes from supporting and empowering others. I measure my impact not only by tasks completed, but by the confidence and momentum my colleagues gain when they know someone has their back. If you’re looking for a dedicated administrative partner who combines a strong technical background with a genuine commitment to people, I’d love to connect and explore how I can contribute to your team.
+</p>  
+</div>
+
+
+  <footer class="sticky-footer">
+       <a href="./about-me-mobile.html"><img src="./about-me-button-mobile.png" class="button"/></a> &nbsp;&nbsp;
+    <a href="./resume-mobile.html"><img src="./resume-button-mobile.png" class="button"/></a>&nbsp;&nbsp;
+    <a href="./writing-mobile.html"><img src="./writing-button-mobile.png" class="button"/></a>&nbsp;&nbsp;
+    <a href="./blog-mobile.html"><img src="./blog-button-mobile.png" class="button"/></a>&nbsp;&nbsp;
+  </footer>
+
+
+    <script>
+    const toHide = document.querySelectorAll('.hide-on-scroll');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 0) {
+        toHide.forEach(el => el.classList.add('hidden'));
+      } else {
+        toHide.forEach(el => el.classList.remove('hidden'));
+      }
+    });
+  </script>
+
+</body>
+</html>
