@@ -1,0 +1,254 @@
+/* Core Styling & Palette matching the mockups */
+:root {
+    --bg-dark: #0b1528;
+    --card-bg: #13223f;
+    --text-main: #ffffff;
+    --text-muted: #a0aec0;
+    --accent-yellow: #f1c40f;
+    --accent-blue-clicked: #4fc3f7; /* Light blue from your mockup */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    padding-bottom: 60px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--bg-dark);
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 0.95rem;
+}
+
+.btn-buy {
+    background-color: var(--accent-yellow);
+    border: none;
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-buy:hover {
+    opacity: 0.9;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    align-items: start;
+}
+
+/* Card Styles & Growing Animation Mechanic */
+/* 1. This handles the card when it is UNCLICKED */
+.feature-card {
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /* Force the fixed height and hide the extra content */
+    height: 380px !important; 
+    overflow: hidden !important; 
+    
+    /* Smooth transition for when it changes */
+    transition: height 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* 2. This handles the card when it IS CLICKED */
+.feature-card.active {
+    /* Override the fixed 380px height to let it grow naturally */
+    height: auto !important; 
+    max-height: 2000px !important; 
+}
+
+
+.card-summary {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.short-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Expanded Content Internal Elements */
+.card-expanded-content {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none; /* Prevent interaction while hidden */
+}
+
+.feature-card.active .card-expanded-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    margin-bottom: 25px;
+}
+
+.detailed-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
+
+.bullet-list {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.bullet-list li {
+    margin-bottom: 8px;
+}
+
+/* Mock Graphics & Data Visuals */
+.illustration-placeholder, .chart-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.mock-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    height: 100px;
+    padding-top: 10px;
+}
+
+.chart-title {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+}
+
+.bar {
+    width: 10%;
+    background: var(--accent-blue-clicked);
+    border-radius: 3px 3px 0 0;
+    transition: height 1s ease-in-out;
+}
+
+.mock-map {
+    text-align: center;
+    color: var(--text-muted);
+    padding: 20px 0;
+    border: 1px dashed rgba(255,255,255,0.2);
+}
+
+/* Button Configurations */
+.btn-learn-more {
+    background-color: var(--accent-yellow);
+    border: none;
+    color: #ffffff;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Remove or replace the old '.feature-card.active .btn-learn-more { display: none; }' with this: */
+
+.feature-card.active .btn-learn-more {
+    display: block !important;       /* 👈 Ensures the button stays visible */
+    background-color: var(--accent-blue-clicked) !important; /* 👈 Turns light blue when clicked */
+    color: #000;
+}
+
+/* Lower CTA Area */
+.cta-section {
+    text-align: center;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 40px;
+}
+
+.cta-section h3 {
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-specs {
+    background: transparent;
+    border: 1px solid var(--text-muted);
+    color: var(--accent-yellow);
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
