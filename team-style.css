@@ -1,0 +1,188 @@
+/* Core Styling & Palette matching the mockups */
+:root {
+    --bg-dark: #0b1528;
+    --card-bg: #13223f;
+    --text-main: #ffffff;
+    --text-muted: #a0aec0;
+    --accent-yellow: #f1c40f;
+    --accent-blue-clicked: #4fc3f7; /* Light blue from mockup */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    padding-bottom: 60px;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--bg-dark);
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 0.95rem;
+}
+
+.btn-buy {
+    background-color: var(--accent-yellow);
+    border: none;
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.btn-buy:hover {
+    opacity: 0.9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.section-title span {
+    font-size: 2.2rem;
+    color: #ffffff;
+}
+
+/* Team Grid Layout - Centered for 2 Members */
+.team-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Individual Team Card */
+.team-card {
+    background: linear-gradient(145deg, #11131c, #1a1d29);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 320px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Image Wrapper with Rounded Top Frame style */
+.image-wrapper {
+    width: 130px;
+    height: 160px;
+    margin: 0 auto 20px auto;
+    overflow: hidden;
+    border-radius: 65px 65px 0 0; /* Creates the arched look from the image */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: #242836;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Typography Inside Cards */
+.member-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #ffffff;
+}
+
+.member-role {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #aaaaaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.member-bio {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 1.4rem;
+    }
+    
+    .section-title span {
+        font-size: 1.7rem;
+    }
+}
+
+.hero-showcase {
+    width: 100%;
+    background-color: #0b132b; /* Match your deep dark blue layout color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.hero-image {
+    width: 100%;
+    max-width: 1200px; /* Keeps it from blowing up too massive on giant displays */
+    height: auto;
+    display: block;
+}
+
+/* Layout Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
